@@ -1,7 +1,11 @@
-import java.io.*;
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class myIO {
 
@@ -43,6 +47,18 @@ public class myIO {
 //					outputStream.print(m.charAt(i));
 //				}
 //			}
+
+			for(int i = 0; i <= text.size(); i++){
+				outputStream.write(text.get(i));
+			}
+			outputStream.write("/n");
+			for(int i = 0; i <= revText.size(); i++){
+				outputStream.write(revText.get(i));
+			}
+			outputStream.write("/n");
+			for(int i = 0; i <= revEvery.size(); i++){
+				outputStream.write(revEvery.get(i));
+			}
 		} 
 		catch (Exception e){
 			System.out.println("File Not Found");
