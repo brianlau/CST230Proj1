@@ -30,40 +30,42 @@ public class myIO {
 			while ((l = inputStream.readLine()) != null) {
 				text.add(l);
 			}
-			for(int i = 0; i <= text.size()-1; i++){
+			for (int i = 0; i <= text.size() - 1; i++) {
 				String temp = text.get(i);
-				String rev ="";
-				for(int j = temp.length()-1; j >=0; j--){
+				String rev = "";
+				for (int j = temp.length() - 1; j >= 0; j--) {
 					char letter = temp.charAt(j);
 					rev = rev + letter;
 				}
 				revText.add(rev.toString());
 			}
-			for (int i = revText.size() -1; i >= 0; i-- ){
+			for (int i = revText.size() - 1; i >= 0; i--) {
 				revEvery.add(revText.get(i));
 			}
-//			while ((m = inputStream.readLine()) != null){
-//				for(int i = m.length()-1; i >= 0; i--){
-//					outputStream.print(m.charAt(i));
-//				}
-//			}
+			// while ((m = inputStream.readLine()) != null){
+			// for(int i = m.length()-1; i >= 0; i--){
+			// outputStream.print(m.charAt(i));
+			// }
+			// }
 
-			for(int i = 0; i <= text.size(); i++){
+			for (int i = 0; i <= text.size() - 1; i++) {
 				outputStream.write(text.get(i));
+				outputStream.write("\n");
 			}
-			outputStream.write("/n");
-			for(int i = 0; i <= revText.size(); i++){
-				outputStream.write(revText.get(i));
+			outputStream.write("\n");
+			for (int j = 0; j <= revText.size() - 1; j++) {
+				outputStream.write(revText.get(j));
+				outputStream.write("\n");
 			}
-			outputStream.write("/n");
-			for(int i = 0; i <= revEvery.size(); i++){
-				outputStream.write(revEvery.get(i));
+			outputStream.write("\n");
+			for (int k = 0; k <= revEvery.size() - 1; k++) {
+				outputStream.write(revEvery.get(k));
+				outputStream.write("\n");
 			}
-		} 
-		catch (Exception e){
+
+		} catch (Exception e) {
 			System.out.println("File Not Found");
-		}
-		finally {
+		} finally {
 			if (inputStream != null) {
 				inputStream.close();
 			}
